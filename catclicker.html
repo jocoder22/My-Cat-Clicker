@@ -21,38 +21,61 @@
   <body>
     <div class="container-fluid">
       <div class="row">
-        <div class="col-md-6">
-          <p id="cat1-name"></p>
-            <img id="cat1-image"  src="https://lh3.ggpht.com/nlI91wYNCrjjNy5f-S3CmVehIBM4cprx-JFWOztLk7vFlhYuFR6YnxcT446AvxYg4Ab7M1Fy0twaOCWYcUk=s0#w=640&h=426" alt="Cat One" style="width:677px;height:466px;">
-            <p> Number of clicks : <span id="cat1-number"></span></p>
+        <br>
+        <div class="col-md-offset-1 col-md-2 ">
+        <br><br><hr>
+          <button id="cat1-name" onclick="myfunction(this)">Poplinre</button>
+          <br><hr>
+          <button id="cat2-name" onclick="myfunction(this)">Chewie</button>
+          <br><hr>
+          <button id="cat3-name" onclick="myfunction(this)">Jetske</button>
+          <br> <hr>
+          <button id="cat3-name" onclick="myfunction(this)">Ran Kitten</button>
+          <br> <hr>
+          <button id="cat3-name" onclick="myfunction(this)">Green Eyes Kitten</button>
+          <br> <hr>
+          <button id="cat3-name" onclick="myfunction(this)">Cute Kitten</button><br> <hr>
         </div>
-        <div class="col-md-6">
-          <p id="cat2-name"></p>
-            <img id="cat2-image" src="https://lh3.ggpht.com/kixazxoJ2ufl3ACj2I85Xsy-Rfog97BM75ZiLaX02KgeYramAEqlEHqPC3rKqdQj4C1VFnXXryadFs1J9A=s0#w=640&h=496" alt="Cat Two" style="width:677px;height:466px;">
-            <p> Number of clicks : <span id="cat2-number"></span></p>
+        <div class="col-md-9">
+          <p id="newName">Cool Kitten</p>
+          <img id="catlog" src="https://placekitten.com/800/569" alt="Cats" style="width:677px;height:466px;">
+          <p> Number of clicks : <span id="cat-number"></span></p>
         </div>
 
       </div>
     </div>
+
     <script type="text/javascript">
-    https://lh5.ggpht.com/LfjkdmOKkGLvCt-VuRlWGjAjXqTBrPjRsokTNKBtCh8IFPRetGaXIpTQGE2e7ZCUaG2azKNkz38KkbM_emA=s0#w=640&h=454
+    var cat1Url ="https://lh5.ggpht.com/LfjkdmOKkGLvCt-VuRlWGjAjXqTBrPjRsokTNKBtCh8IFPRetGaXIpTQGE2e7ZCUaG2azKNkz38KkbM_emA=s0#w=640&h=454";
+    var cat2Url = "https://lh3.ggpht.com/kixazxoJ2ufl3ACj2I85Xsy-Rfog97BM75ZiLaX02KgeYramAEqlEHqPC3rKqdQj4C1VFnXXryadFs1J9A=s0#w=640&h=496";
+    var cat3Url = "https://lh3.ggpht.com/nlI91wYNCrjjNy5f-S3CmVehIBM4cprx-JFWOztLk7vFlhYuFR6YnxcT446AvxYg4Ab7M1Fy0twaOCWYcUk=s0#w=640&h=426";
+    var cat4Url = "https://placekitten.com/800/560";
+    var cat5Url = "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Green_eyes_kitten.jpg/680px-Green_eyes_kitten.jpg";
+    var cat6Url = "https://placekitten.com/1160/600";
+
     var counter1 = 0;
-    var counter2 = 0;
-    var catName1 = 'Poplinre';
-    var catName2 = 'Chewie';
+    var catNames = ['Poplinre', 'Chewie', 'Jetske', "Ran Kitten","Green Eyes Kitten", "Cute Kitten"];
+    var pictures = [cat1Url, cat2Url, cat3Url, cat4Url, cat5Url, cat6Url];
 
-    document.getElementById("cat1-name").innerHTML = catName1;
-    document.getElementById("cat2-name").innerHTML = catName2;
-    $("#cat1-image").click(function(e){
-      counter1++;
-      document.getElementById("cat1-number").innerHTML = counter1;
-    });
+    function myfunction(mm){
+      for (var i = 0; i < catNames.length; i++){
+        var name = catNames[i];
+        if (name == mm.innerHTML){
+          var pic = pictures[i];
+          counter1 = 0;
+          document.getElementById("cat-number").innerHTML = counter1;
+          document.getElementById("newName").innerHTML = name;
+          document.getElementById("catlog").src = pic;
+        }
+      }
 
-    $("#cat2-image").click(function(e){
-      counter2++;
-      document.getElementById("cat2-number").innerHTML = counter2;
-    });
+    }
 
+
+    $("#catlog").click(function(e){
+        counter1++;
+        document.getElementById("cat-number").innerHTML = counter1;
+      });
     </script>
   </body>
 </html>
