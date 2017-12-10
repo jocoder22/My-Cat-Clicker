@@ -18,33 +18,18 @@
         </div>
       </div>
     </nav>
-    
+
     <div class="container-fluid">
       <div class="row">
-        <br>
-        <div class="col-md-offset-1 col-md-2 ">
-        <br><br><hr>
-          <button id="cat1-name" onclick="myfunction(this)">Poplinre</button>
-          <br><hr>
-          <button id="cat2-name" onclick="myfunction(this)">Chewie</button>
-          <br><hr>
-          <button id="cat3-name" onclick="myfunction(this)">Jetske</button>
-          <br> <hr>
-          <button id="cat3-name" onclick="myfunction(this)">Ran Kitten</button>
-          <br> <hr>
-          <button id="cat3-name" onclick="myfunction(this)">Green Eyes Kitten</button>
-          <br> <hr>
-          <button id="cat3-name" onclick="myfunction(this)">Cute Kitten</button><br> <hr>
+        <div class="col-md-offset-1" id="cat">
+          <h1 id="cat-name" data-bind="text: name"></h1>
+            <img id="cat-image"  src="" alt="Adorable Cat" data-bind="click: counter, attr: {src: imgSrc}">
+            <p> Number of clicks : <span id="cat1-number" data-bind="text: clickCount"></span> </p>
         </div>
-        <div class="col-md-9">
-          <p id="newName">Cool Kitten</p>
-          <img id="catlog" src="https://placekitten.com/800/569" alt="Cats" style="width:677px;height:466px;">
-          <p> Number of clicks : <span id="cat-number"></span></p>
-        </div>
-
       </div>
     </div>
 
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-min.js"></script>
     <script type="text/javascript" src="js/scripts.js"></script>
   </body>
 </html>
