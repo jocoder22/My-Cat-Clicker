@@ -4,29 +4,34 @@
     <meta charset="utf-8">
     <title>Cat Clicker</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="css/styles.css">
   </head>
   <body>
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container-fluid">
-        <div class="col-md-offset-2 col-md-8">
-          <a class="navbar-brand " href="#">Cat Clicker</a>
+        <div class="row">
+          <a class="navbar-brand " href="#"><h1>Cat Clicker</h1></a>
         </div>
       </div>
     </nav>
 
     <div class="container-fluid">
-      <br><br><hr>
+      <br><br><br>
       <div class="row">
-        <div class="col-md-offset-1" id="cat">
-          <h1 id="cat-name" data-bind="text: name"></h1>
-            <img id="cat-image"  src="" alt="Adorable Cat" data-bind="click: counter, attr: {src: imgSrc}">
-            <p> Number of clicks : <span id="cat1-number" data-bind="text: clickCount"></span> </p>
-        </div>
+          <div class="col-md-offset-1 col-md-3" id="cat" >
+          <br><br><hr>
+            <ul data-bind="foreach: catList">
+              <hr>
+              <li data-bind="text: name"> <hr></li><hr>
+            </ul>
+            <hr>
+          </div>
+          <div class="col-md-7" data-bind="with: currentCat">
+            <h1 id="cat-name" data-bind="text: name"></h1>
+            <h1 id="cat-name" data-bind="text: title"></h1>
+              <img id="cat-image"  src="" alt="Adorable Cat" data-bind="click: $parent.counter, attr: {src: imgSrc}">
+              <p> Number of clicks : <span id="cat1-number" data-bind="text: clickCount"></span> </p>
+          </div>
       </div>
     </div>
 
