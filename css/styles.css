@@ -3,6 +3,9 @@ body {
    color: white
   }
 
-p {
+p, li {
   font-size: 25px;
  }
+button {
+  color: black;
+}
