@@ -78,7 +78,9 @@ var ViewModel = function() {
     self.currentCat().clickCount(currentCount + 1);
 
   };
-
+  this.showname = function(clickedCat){
+    self.currentCat(clickedCat);
+  };
 
 };
 
