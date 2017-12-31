@@ -41,7 +41,7 @@ var myCat = function(data){
   this.imgSrc = ko.observable(data.imgSrc);
 
   this.title = ko.computed(function(){
-    var title;
+    var title = '';
     var clicks = self.clickCount();
     if (clicks < 10){
       title = 'Newborn';
@@ -56,7 +56,7 @@ var myCat = function(data){
     }else {
       title = 'Ninja'
     } return title;
-  },this);
+  });
 }
 
 
